@@ -16,10 +16,13 @@
     "optimist": "*",
     "redis": "*",
     "request": "*",
-    "winston": "*"
+    "winston": "*",
+    "snyk": "^1.316.1"
   },
   "scripts": {
-    "test": "echo \"Check the README on how to run tests!\" && exit 1"
+    "test": "echo \"Check the README on how to run tests!\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "bin": {
     "guardian": "index.js"
@@ -39,5 +42,6 @@
     "oauth",
     "plugin",
     "plugins"
-  ]
+  ],
+  "snyk": true
 }
